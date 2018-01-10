@@ -1,0 +1,216 @@
+// LANDING PAGE
+@import "fonts";
+
+body.home {
+    background-color: #02343b;
+    //  index: 10;
+    overflow-y: hidden;
+}
+
+// BACKGROUND
+
+.background {
+    background-image: url('../images/desktop/indexBg.gif');
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    // opacity: 0;
+}
+
+// LOGO
+
+.landingLogo {
+    max-width: 100%;
+    float: left;
+    height: auto;
+}
+
+// DESIGNATION
+
+.designation {
+    margin-top: 10%;
+    color: rgba(255,255,255,.4);
+    // font-size: 30px;
+    text-align: center;
+    font-weight: lighter;
+    font-size: 18px;
+
+    span:before {
+        content: 'Designer';
+        animation: designation infinite 8s;
+        animation-delay: 1s;
+    }
+    @keyframes designation {
+        0% {
+            content: 'Designer';
+        }
+
+        25% {
+            content: '3D Artist';
+        }
+
+        50% {
+            content: 'Motion Graphics Artist';
+        }
+
+        75% {
+            content: 'Developer';
+        }
+
+        100% {
+            content: 'Designer';
+        }
+    }
+}
+@media screen and (max-width:500px) {
+    .designation {
+        font-size: 20px;
+    }
+    @supports(-webkit-appearance:none) {
+        .fa {
+            margin-top: 15px;
+            font-size: 35px;
+        }
+    }
+    @supports(-moz-appearance:none) {
+        .fa {
+            margin-top: 15px;
+            font-size: 35px;
+        }
+    }
+
+    .smallText {
+        font-size: 20px;
+    }
+
+    .arrow {
+        margin-left: 40%;
+        width: 20%;
+    }
+}
+@media screen and (min-width:750px) {
+    .designation {
+        font-size: 25px;
+    }
+    @supports(-webkit-appearance:none) {
+        .fa {
+            margin-top: 15px;
+            font-size: 35px;
+        }
+    }
+    @supports(-moz-appearance:none) {
+        .fa {
+            margin-top: 15px;
+            font-size: 35px;
+        }
+    }
+
+    .smallText {
+        font-size: 30px;
+    }
+
+    .arrow {
+        width: 10%;
+        margin-left: 45%;
+    }
+}
+
+.overlayContent {
+    li {
+        a {
+            font-size: 20px;
+        }
+    }
+
+    .arrow {
+        margin-left: 50%;
+        width: 8%;
+    }
+}
+@media screen and (min-width:1024px) {
+    .designation {
+        font-size: 30px;
+    }
+    @supports(-webkit-appearance:none) {
+        .fa {
+            margin-top: 25px;
+            font-size: 45px;
+        }
+    }
+    @supports(-moz-appearance:none) {
+        .fa {
+            margin-top: 30px;
+            font-size: 45px;
+        }
+    }
+
+    .arrow {
+        margin-left: 47%;
+        width: 10%;
+    }
+}
+
+.overlayContent {
+    li {
+        a {
+            font-size: 40px;
+        }
+    }
+}
+
+.homepageButtons {
+    margin-top: 5%;
+    max-width: 100%;
+    height: auto;
+
+    img {
+        float: left;
+    }
+}
+
+.about {
+    transition: 1s;
+}
+
+.work {
+    transition: 1s;
+}
+
+.about:hover {
+    filter: brightness(200%);
+}
+
+.work:hover {
+    filter: brightness(200%);
+}
+
+.arrow {
+    // width: 15%;
+    margin-top: 10%;
+    // margin-left: 45%;
+    animation: upDown 5s infinite;
+    opacity: 0;
+}
+@keyframes upDown {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

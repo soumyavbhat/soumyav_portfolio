@@ -1,0 +1,213 @@
+// Import scss
+@import "reset";
+@import "fonts";
+@import "indexstyle";
+@import "aboutstyle";
+@import "colour";
+@import "contactstyle";
+@import "workstyle";
+
+body {
+    // background-color: #02343b;
+    font-family: $lato;
+    max-width: 100%;
+}
+
+@media screen and (max-width:1366px) {
+    max-width: 1366px;
+}
+// @media screen and (min-width:575px) {
+//     min-width: 575px;
+// }
+
+.hidden {
+    display: none;
+}
+
+
+// HEADER
+.page-content{
+  margin-right: 12px;
+}
+
+
+.nav {
+    a {
+        color: $white;
+        // float: left;
+    }
+}
+
+#wrapper {
+    // padding-left: 250px;
+    padding-left: 60px;
+    transition: 0.5s ease;
+}
+
+#sidebar-wrapper {
+    // background-color: green;
+    margin-left: -200px;
+    left: 220px;
+    width: 150px;
+    position: fixed;
+    height: 100%;
+    // overflow-y: auto;
+    z-index: 1000;
+    overflow: hidden;
+    padding-right: 10px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+}
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 350px;
+    height:50px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+.navigation {
+    margin-top: 35%;
+    transform: rotate(-90deg);
+    margin-left: -250px;
+
+    a {
+        float: left;
+        display: inline;
+        margin-right: 20px;
+        color: $white;
+        font-size: 18px;
+        border-right: solid 2px $white;
+        padding-right: 20px;
+    }
+
+    a:hover {
+        color: $quaternaryColour;
+        border: none;
+        text-decoration: none;
+        border-right: solid 2px $white;
+        padding-right: 20px;
+    }
+}
+
+a:last-child {
+    border: none;
+}
+
+a:last-child:hover {
+    border: none;
+}
+
+.smallNav {
+    a {
+        border-right: none;
+        background-color: none;
+    }
+}
+
+.fa {
+    padding: 10px 0;
+    color: rgba(255,255,255,.5);
+    // font-size: 25px;
+}
+@supports(-webkit-appearance:none) {
+    .fa {
+        font-size: 30px;
+    }
+}
+@supports(-moz-appearance:none) {
+    .fa {
+        font-size: 20px;
+    }
+}
+
+// .overlay {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     background-color: rgba(0,0,0,.8);
+//     overflow-x: hidden;
+//     width: 100%;
+//     height: 0%;
+//     z-index: 30;
+// }
+//
+// .overlayContent {
+//     position: relative;
+//     top: 25%;
+//     width: 100%;
+//     text-align: center;
+//     margin-top: 30px;
+//
+//     a {
+//         // padding: 10px;
+//         border: none;
+//     }
+//
+//     li {
+//         padding: 10px;
+//     }
+// }
+//
+// .box {
+//     border-bottom: rgba(255,255,255,.2) 1px solid;
+//     margin-bottom: 10px;
+//     width: 100%;
+//     text-align: center;
+//     font-size: 3em;
+//
+//     a {
+//         color: $white;
+//         padding: 10px;
+//
+//     }
+//
+//     a:hover {
+//         text-decoration: none;
+//     }
+// }
+
+.fa-chevron-up {
+    color: white;
+}
+
+.fa-chevron-up:hover {
+    color: white;
+}
+
+.modal-dialog{
+  margin: 0 auto;
+  // margin-top: 15%;
+  background-color: rgba(0,0,0,.7);
+  border-radius: 0px;
+  width:100%;
+  height: 100%;
+// ul{
+//   margin-top: 15%;
+// }
+li{
+   margin-top: 15%;
+  //  width: 100%;
+   text-align: center;
+  //  font-size: 5em;
+}
+
+
+}
+
+.glyphicon-menu-hamburger{
+margin-top: 45%;
+  font-size: 5.5vw;
+  color: $white;
+}
+
+.glyphicon-chevron-up{
+  font-size: 5.5vw;
+  color: $white;
+}
