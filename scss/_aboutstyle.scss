@@ -1,0 +1,409 @@
+@import "fonts";
+@import "colour";
+
+.aboutbackground {
+    background-image: url('../images/desktop/about.png');
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute; // opacity: 0;
+    // margin-top: 5%;
+    overflow-x: hidden;
+}
+@media screen and (max-width:960px)
+{
+  body.aboutpage{
+    overflow-y: display;
+  }
+
+}
+body.aboutpage {
+    background-color: #023F48;
+    margin-top: 5%;
+    overflow-y: visible;
+    // overflow: hidden;
+
+// background image
+
+    // background-image: url('../images/desktop/about.png');
+    // width: 100vw;
+    // height: 100vh;
+    // // background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // position: absolute;
+    // opacity: 0;
+    // margin-top: 5%;
+    // overflow: hidden;
+}
+
+// body animation
+body.aboutpage {
+    animation: abouthtml 2s;
+
+}
+@keyframes abouthtml {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.aboutMeImage {
+    float: left;
+    margin-top: 10%;
+}
+
+nav {
+    a {
+        margin-right: 20px;
+        cursor: pointer;
+        color: $white;
+        border-right: solid 2px $white;
+        padding-right: 20px;
+    }
+
+    a:hover {
+        text-decoration: none;
+        color: $quaternaryColour;
+    }
+}
+
+.aboutInfo {
+    width: 620px;
+    color: white;
+    line-height: 30px;
+    margin-top: 5%;
+}
+
+.resume {
+    margin-top: 5%;
+
+    h2 {
+        font-size: 42px;
+        color: #127987;
+        text-align: center;
+        margin-top: 100%;
+    }
+
+    p {
+        font-size: 15px;
+        margin-top: 2%;
+    }
+}
+
+.video {
+    // width: 1024px;
+    height: 400px;
+    background-color: black;
+    margin-bottom: 10px;
+}
+
+.resume {
+    margin-bottom: 10px;
+
+    p {
+        font-family: $mer;
+        color: $white;
+        text-align: center;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+    }
+}
+
+.skill {
+    margin-top: 5%;
+    color: $white;
+
+    h2 {
+        font-size: 30px;
+        color: #127987;
+        text-align: left;
+        // margin-top: 100%;
+    }
+}
+
+.val {
+    float: right;
+    padding-right: 10px;
+}
+
+.skillsInfo {
+    // width: 620px;
+    color: white;
+    line-height: 20px;
+    margin-top: 0.5%;
+
+    p {
+        font-weight: lighter;
+        color: $quinaryColour;
+        font-family: $mer;
+        margin-bottom: 0.3%;
+        font-size: 14px;
+
+        span {
+            color: $white;
+        }
+
+        a {
+            text-decoration: none;
+            color: #ff7700;
+            cursor: pointer;
+        }
+
+        a:hover {
+            color: $quinaryColour;
+        }
+    }
+}
+// Animation
+
+.graphS {
+    margin-top: 0.3%;
+
+    h2 {
+        color: #127987;
+        font-size: 12px;
+        font-family: $mer;
+        margin-bottom: 0.2%;
+    }
+}
+
+.graph {
+    margin-top: 2%;
+
+    h2 {
+        color: #127987;
+        font-size: 16px;
+        font-family: $mer;
+        margin-bottom: 1%;
+        // float: left;
+        // margin-right: 5px;
+    }
+}
+
+.progress {
+    background: #0a5d68;
+    border: 0 solid rgba(245, 245, 245, 1);
+    border-radius: 0;
+    height: 18px;
+}
+
+.progress-bar-custom {
+    background: #027787;
+}
+
+.progress-bar {
+    animation-name: progressBar;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 1.5s;
+}
+@keyframes progressBar {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+#design {
+    cursor: pointer;
+}
+
+#video {
+    cursor: pointer;
+}
+
+#dev {
+    cursor: pointer;
+}
+
+.fa-caret-down {
+    margin: 0 0 0 10px;
+    font-size: 14px;
+}
+
+.carousel {
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.carousel-indicators {
+    position: fixed;
+    // top: auto; // bottom: -20px;
+    bottom: 10px;
+    right: 30px; // z-index: 15;
+    width: 60%;
+    list-style: none;
+    text-align: center;
+}
+
+.carousel-indicators li {
+    // display: inline-block;
+    // width: 10px;
+    // height: 10px;
+    // margin: 1px;
+    // text-indent: -999px;
+    cursor: pointer;
+    background-color: none;
+    border: 1px solid $white;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.carousel-indicators .active {
+    width: 12px;
+    height: 12px;
+    margin: 0;
+    background-color: $white;
+}
+
+.carousel-indicators li:hover{
+
+}
+.profile {
+    font-size: 16px;
+    color: white;
+    margin-top: 5%;
+    line-height: 20px;
+    // float:left;
+    p {
+        font-size: 70%;
+        font-weight: lighter;
+        color: $quinaryColour;
+        font-family: $mer;
+        margin-bottom: 5%;
+    }
+}
+
+.aboutSInfo {
+    color: white;
+    line-height: 20px;
+    text-align: justify;
+}
+
+.resumeSInfo {
+    color: $white;
+    margin-top: 5%;
+}
+
+.experienceSInfo {
+    color: white;
+    line-height: 30px;
+    margin-top: 5%;
+
+    h2 {
+        font-size: 30px;
+    }
+
+    p {
+        font-weight: lighter;
+        color: $quinaryColour;
+        font-family: $mer;
+        margin-bottom: 3%;
+
+        span {
+            color: $white;
+        }
+    }
+}
+
+.educationSInfo {
+    color: white;
+    line-height: 30px;
+    margin-top: 5%;
+
+    h2 {
+        font-size: 30px;
+    }
+
+    p {
+        font-weight: lighter;
+        color: $quinaryColour;
+        font-family: $mer;
+        margin-bottom: 3%;
+
+        span {
+            color: $white;
+        }
+    }
+}
+
+.skillSInfo {
+    color: white;
+    line-height: 20px;
+    margin-top: 3%;
+
+    p {
+        font-weight: lighter;
+        color: $quinaryColour;
+        font-family: $mer;
+        margin-bottom: 1%;
+
+        span {
+            color: $white;
+        }
+
+        a {
+            text-decoration: none;
+            color: #ff7700;
+            cursor: pointer;
+        }
+
+        a:hover {
+            color: $quinaryColour;
+        }
+    }
+}
+
+.panel {
+    background-color: #023F48;
+}
+
+.collapseButton {
+    font-size: 25px;
+    border: rgba(226,183, 86, .5) 1px solid;
+    margin-bottom: 5px;
+    padding: 10px;
+
+    h2 {
+        text-transform: uppercase;
+        text-align: center;
+    }
+}
+
+.card {
+    a {
+        text-decoration: none;
+        color: $white;
+    }
+    margin-bottom: 10px;
+}
+
+.videoS {
+    height: 350px;
+    background-color: black;
+    margin-bottom: 10px;
+    height: 150px;
+}
