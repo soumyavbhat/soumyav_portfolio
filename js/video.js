@@ -1,12 +1,14 @@
+console.log("video");
+
 var video = {
-  videoPlayer : document.querySelector('video'),
-  vidThumbs : document.querySelector('.vid_thumb'),
-  volumeIndicator : document.querySelector('.vol-indicator'),
+  videoPlayer : document.querySelector('.video'),
+  // vidThumbs : document.querySelector('.vid_thumb'),
+  // volumeIndicator : document.querySelector('.vol-indicator'),
 
 volOn(){
 
   video.videoPlayer.muted = false;
-  video.volumeIndicator.classList.replace('fa-volume-off', 'fa-volume-up');
+  // video.volumeIndicator.classList.replace('fa-volume-off', 'fa-volume-up');
   console.log("on");
 
 },
@@ -14,17 +16,17 @@ volOn(){
 volOff(){
 
   video.videoPlayer.muted = true;
-  video.volumeIndicator.classList.replace('fa-volume-up', 'fa-volume-off');
+  // video.volumeIndicator.classList.replace('fa-volume-up', 'fa-volume-off');
 
   console.log("off");
 
 },
 
-popOverlay(){
-  let overlay = document.querySelector('.vid-overlay');
-  overlay.classList.add('show-overlay');
-  overlay.querySelector('i').addEventListener('click', video.replayVideo, false);
-},
+// popOverlay(){
+//   let overlay = document.querySelector('.vid-overlay');
+//   overlay.classList.add('show-overlay');
+//   overlay.querySelector('i').addEventListener('click', video.replayVideo, false);
+// },
 
 replayVideo(){
   video.videoPlayer.currentTime = 0;
@@ -81,7 +83,7 @@ loadNewVideo(){
   console.log("video module added");
   video.videoPlayer.addEventListener('mouseover', video.volOn, false);
   video.videoPlayer.addEventListener('mouseout', video.volOff, false);
-  video.videoPlayer.addEventListener('ended', video.popOverlay, false);
+  // video.videoPlayer.addEventListener('ended', video.popOverlay, false);
 
   video.fetchVideoThumbs();
 

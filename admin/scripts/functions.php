@@ -1,37 +1,43 @@
+
 <?php
-  $user = "root";
-  $pass = ""; // this should be a blank screen for windows machines
-  $host = "localhost";
-  $db = "db_portfolio";
+//ini_set("display_errors",1);
+//error_reporting(E_ALL);
+$user = 'root';
+$pass = '';
+$host= 'localhost';
+$db = 'db_portfolio';
 
-  $conn = mysqli_connect($host, $user, $pass, $db);
-  mysqli_set_charset($conn, 'utf8');
+$conn = mysqli_connect($host, $user, $pass, $db);
+mysqli_set_charset($conn, 'utf8');
 
-  if (!$conn) {
-    exit;
-  }
+if (mysqli_connect_errno()){
+  printf("Connect fail: %s\n", mysqli_connect_error()); //forces error to be a string
+  exit();
+}
+//echo "working";
 
+if (isset($_GET['id'])) {
 
-  // $myQuery = "SELECT * FROM tbl_about";
-  // $result = mysqli_query($conn, $myQuery);
-  //
-  // $rows = array();
-  //
-  // while($row = mysqli_fetch_assoc($result)) {
-  //   $rows[] = $row;
-  // }
+  $id=$_GET['id'];
 
+  $myQuery = "SELECT * FROM tbl_work WHERE work_id={$id}";
+//echo $myQuery;
+  $result = mysqli_query($conn, $myQuery);
+//echo $result;
+  //$row = mysqli_fetch_assoc($result);
+}
+$grpResult="";
+echo"[";
+// $proResult = array();
+while ($proResult= mysqli_fetch_assoc($result)){
+  // echo $result['gallery_name'];
+  $jsonResult = json_encode($proResult);
+  //echo$jsonResult;
+  $grpResult .= $jsonResult.",";
+  //JSONLINT copy and paste your json code from the browser to see if its valid
+}
+echo substr ($grpResult,0, -1);
 
-  if (isset($_GET['aboutDesc'])) {
-    $desc = $_GET['aboutDesc'];
-
-    $myQuery = "SELECT about_desc FROM tbl_about";
- $result = mysqli_query($conn, $myQuery);
-
-    $row =mysqli_fetch_assoc($result);
-
-    echo json_encode($row['about_desc']);
-  }
-
-
+echo "]";
+mysqli_close($conn);
 ?>
