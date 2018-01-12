@@ -198,7 +198,7 @@ body.home {
     overflow-y: display; } }
 body.aboutpage {
   background-color: #023F48;
-  margin-top: 5%;
+  margin-top: 3%;
   overflow-y: visible; }
 
 body.aboutpage {
@@ -609,6 +609,21 @@ textarea {
   margin-left: 5%;
   text-align: center; }
 
+body.workpage {
+  background-color: #001a1f;
+  margin-top: 3%;
+  overflow-x: hidden; }
+
+body.workpage {
+  animation: workpage 1s; }
+
+@keyframes workpage {
+  from {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0); }
+  to {
+    opacity: 1;
+    transform: none; } }
 .gallery h1 {
   margin-top: 1.5vw;
   color: rgba(255, 255, 255, 0.4);
@@ -634,16 +649,13 @@ textarea {
     margin-bottom: 5%; }
 
 .galleryButton {
-  margin-left: 27%;
   margin-bottom: 2%; }
-  .galleryButton h3 {
-    float: left;
+  .galleryButton div {
+    text-align: center;
     cursor: pointer;
     color: rgba(255, 255, 255, 0.4);
     text-transform: uppercase;
-    margin-right: 2.5%;
-    padding-right: 2.5%;
-    border-right: 1px solid rgba(255, 255, 255, 0.4);
+    margin-bottom: 1%;
     text-align: center; }
   .galleryButton h3:last-child {
     border: none; }
@@ -655,6 +667,11 @@ textarea {
   display: flex;
   flex-wrap: wrap;
   padding: 0 4px; }
+  .imgs img {
+    filter: grayscale(50%);
+    transition: 1s; }
+  .imgs img:hover {
+    filter: grayscale(0); }
 
 /* Create four equal columns that sits next to each other */
 .galleryImage {
@@ -679,6 +696,41 @@ textarea {
     max-width: 50%; } }
 .light {
   background-color: rgba(0, 0, 0, 0.7); }
+
+@media screen and (max-width: 960px) {
+  .imgtag img {
+    margin-left: 15%; } }
+.dev-image {
+  height: 31vw;
+  width: auto;
+  margin: 1%; }
+
+.dev-desc {
+  margin-top: 1%;
+  color: rgba(255, 255, 255, 0.4);
+  padding: 1%;
+  margin-left: 10%;
+  text-align: center; }
+
+.vid-image {
+  height: 25vw;
+  width: auto;
+  margin: 1%; }
+
+.vid {
+  height: 25vw;
+  width: auto;
+  margin: 1%; }
+
+.vid-desc {
+  margin-top: 1%;
+  color: rgba(255, 255, 255, 0.4);
+  padding: 1%;
+  text-align: center; }
+
+.imgtag {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  padding-bottom: 1%; }
 
 body {
   font-family: "Lato", sans-serif;

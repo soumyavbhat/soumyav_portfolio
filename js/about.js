@@ -18,9 +18,9 @@ var def = document.querySelector(".default"),
     designSButton = document.querySelector("#designS");
     videoSButton = document.querySelector("#videoS");
     devSButton = document.querySelector("#devS");
-var nojs = document.querySelector(".nojs");
-
-    nojs.style.display = 'none';
+// var nojs = document.querySelector(".nojs");
+//
+//     nojs.style.display = 'none';
 
 des.style.display = 'none';
 vid.style.display = 'none';
